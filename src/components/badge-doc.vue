@@ -4,19 +4,19 @@
         <v-collection>
             <v-collection-item>
                 Alan
-                <v-badge new slot="secondary"></badge>
+                <v-badge new slot="secondary"></v-badge>
             </v-collection-item>
             <v-collection-item>
                 Alan
-                <v-badge new class="blue" slot="secondary"></badge>
+                <v-badge new class="blue" slot="secondary"></v-badge>
             </v-collection-item>
             <v-collection-item>
                 Alan
-                <v-badge new class="red" slot="secondary"></badge>
+                <v-badge new class="red" slot="secondary"></v-badge>
             </v-collection-item>
             <v-collection-item>
                 Alan
-                <v-badge new class="purple" slot="secondary"></badge>
+                <v-badge new class="purple" slot="secondary"></v-badge>
             </v-collection-item>
         </v-collection>
         <markup html='
