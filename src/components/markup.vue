@@ -24,7 +24,7 @@
     }
 </script>
 
-<style scoped lang="sass">
+<style scoped lang="scss">
     pre {
         border: solid 1px rgba(51,51,51,0.12);
         margin: 2rem 0;

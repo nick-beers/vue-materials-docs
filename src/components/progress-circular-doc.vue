@@ -1,31 +1,31 @@
 <template>
     <div class="col s12">
         <h4>Small</h4>
-        <v-row>
-            <v-grid s4><v-progress-circular small active></v-progress-circular></v-grid>
-            <v-grid s4><v-progress-circular small active></v-progress-circular></v-grid>
-            <v-grid s4><v-progress-circular small active></v-progress-circular></v-grid>
-        </v-row>
+        <m-row>
+            <m-grid s4><m-progress-circular small active></m-progress-circular></m-grid>
+            <m-grid s4><m-progress-circular small active></m-progress-circular></m-grid>
+            <m-grid s4><m-progress-circular small active></m-progress-circular></m-grid>
+        </m-row>
         <markup html='
-        <v-progress-circular small active></v-progress-circular>'
+        <m-progress-circular small active></m-progress-circular>'
         ></markup>
         <h4>Large</h4>
-        <v-row>
-            <v-grid s4><v-progress-circular active large></v-progress-circular></v-grid>
-            <v-grid s4><v-progress-circular active large></v-progress-circular></v-grid>
-            <v-grid s4><v-progress-circular active large></v-progress-circular></v-grid>
-        </v-row>
+        <m-row>
+            <m-grid s4><m-progress-circular active large></m-progress-circular></m-grid>
+            <m-grid s4><m-progress-circular active large></m-progress-circular></m-grid>
+            <m-grid s4><m-progress-circular active large></m-progress-circular></m-grid>
+        </m-row>
         <markup html='
-        <v-progress-circular active large></v-progress-circular>'
+        <m-progress-circular active large></m-progress-circular>'
         ></markup>
         <h4>Flashing</h4>
-        <v-row>
-            <v-grid s4><v-progress-circular active red-flash></v-progress-circular></v-grid>
-            <v-grid s4><v-progress-circular active green-flash></v-progress-circular></v-grid>
-            <v-grid s4><v-progress-circular active blue-flash></v-progress-circular></v-grid>
-        </v-row>
+        <m-row>
+            <m-grid s4><m-progress-circular active red-flash></m-progress-circular></m-grid>
+            <m-grid s4><m-progress-circular active green-flash></m-progress-circular></m-grid>
+            <m-grid s4><m-progress-circular active blue-flash></m-progress-circular></m-grid>
+        </m-row>
         <markup html='
-        <v-progress-circular active red red-flash></v-progress-circular>'
+        <m-progress-circular active red red-flash></m-progress-circular>'
         ></markup>
         <props :props="props"></props>
     </div>

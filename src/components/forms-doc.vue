@@ -2,320 +2,320 @@
     <form>
         <h4 class="col s12">Examples</h4>
 
-        <v-grid s6>
+        <m-grid s6>
             <div class="input-field">
-                <v-text-input name="first"
+                <m-text-input name="first"
                             id="first"
                             placeholder="First Name"
                             v-model="test"
-                ></v-text-input>
+                ></m-text-input>
                 <label for="first"
                        class="active"
                 >First Name</label>
                 {{ test }}
             </div>
-        </v-grid>
-        <v-grid s6>
+        </m-grid>
+        <m-grid s6>
             <div class="input-field">
-                <v-text-input name="last"
+                <m-text-input name="last"
                             id="last"
-                ></v-text-input>
+                ></m-text-input>
                 <label for="last">Last Name</label>
             </div>
-        </v-grid>
-        <v-grid s12>
+        </m-grid>
+        <m-grid s12>
             <markup html='
             <div class="input-field">
-                <v-text-input name="first"
+                <m-text-input name="first"
                             id="first"
                             placeholder="First Name"
-                ></v-text-input>
+                ></m-text-input>
                 <label for="first">First Name</label>
             </div>'
             ></markup>
-        </v-grid>
-        <v-grid s12>
+        </m-grid>
+        <m-grid s12>
             <h4>Prefix</h4>
             <div class="input-field">
-                <v-icon prefix>account_circle</v-icon>
-                <v-text-input name="username"
+                <m-icon prefix>account_circle</m-icon>
+                <m-text-input name="username"
                             id="username"
-                ></v-text-input>
+                ></m-text-input>
                 <label for="username">Username</label>
             </div>
             <markup html='
             <div class="input-field">
-                <v-icon prefix>account_circle</v-icon>
-                <v-text-input name="username"
+                <m-icon prefix>account_circle</m-icon>
+                <m-text-input name="username"
                             id="username"
-                ></v-text-input>
+                ></m-text-input>
                 <label for="username">Username</label>
             </div>'
             ></markup>
-        </v-grid>
-        <v-grid s12>
+        </m-grid>
+        <m-grid s12>
             <h4>Text Area</h4>
             <div class="input-field">
-                <v-text-area name="ta"
+                <m-text-area name="ta"
                            id="ta"
-                ></v-text-area>
+                ></m-text-area>
                 <label for="ta">Text Area</label>
             </div>
             <markup html='
             <div class="input-field">
-                <v-text-area name="ta"
+                <m-text-area name="ta"
                            id="ta"
-                ></v-text-area>
+                ></m-text-area>
                 <label for="ta">Text Area</label>
             </div>'
             ></markup>
-        </v-grid>
-        <v-grid s12>
+        </m-grid>
+        <m-grid s12>
             <h4>Prefix</h4>
             <div class="input-field">
-                <v-icon prefix>mode_edit</v-icon>
-                <v-text-area name="ta2"
+                <m-icon prefix>mode_edit</m-icon>
+                <m-text-area name="ta2"
                            id="ta2"
-                ></v-text-area>
+                ></m-text-area>
                 <label for="ta2">Text Area</label>
             </div>
             <markup html='
             <div class="input-field">
-                <v-icon prefix>mode_edit</v-icon>
-                <v-text-area name="ta2"
+                <m-icon prefix>mode_edit</m-icon>
+                <m-text-area name="ta2"
                            id="ta2"
-                ></v-text-area>
+                ></m-text-area>
                 <label for="ta2">Text Area</label>
             </div>'
             ></markup>
-            <props :props="[['length', 'string, number (works on input or v-text-area)']]"></props>
-        </v-grid>
-        <v-grid s12>
+            <props :props="[['length', 'string, number (works on input or m-text-area)']]"></props>
+        </m-grid>
+        <m-grid s12>
             <h4>Select</h4>
             <div class="input-field">
-                <v-select name="select"
+                <m-select name="select"
                           id="select"
                           :items="items"
-                ></v-select>
+                ></m-select>
                 <label for="select">Select</label>
             </div>
             <markup html='
             <div class="input-field">
-                <v-select name="select"
+                <m-select name="select"
                           id="select"
                           :items="items"
-                ></v-select>
+                ></m-select>
                 <label for="select">Select</label>
             </div>'
             ></markup>
             <h4>Multiple</h4>
             <div class="input-field">
-                <v-select name="select2"
+                <m-select name="select2"
                           id="select2"
                           :items="items"
                           multiple
-                ></v-select>
+                ></m-select>
                 <label for="select2">Select</label>
             </div>
             <markup html='
             <div class="input-field">
-                <v-select name="select2"
+                <m-select name="select2"
                           id="select2"
                           :items="items"
                           multiple
-                ></v-select>
+                ></m-select>
                 <label for="select2">Select</label>
             </div>'
             ></markup>
             <props :props="[['items', 'array, object values, [id, text]'], ['v-model', 'string, number, array (multiple)'], ['select-text', 'set the select text, default: Choose your options']]"></props>
-        </v-grid>
-        <v-grid s12>
+        </m-grid>
+        <m-grid s12>
             <h4>Radios</h4>
             <div class="input-field">
-                <v-radio name="radio"
+                <m-radio name="radio"
                        id="radio"
                        val="1"
                        checked
-                >Red</v-radio>
+                >Red</m-radio>
             </div>
             <div class="input-field">
-                <v-radio name="radio"
+                <m-radio name="radio"
                        id="radio2"
-                >Yellow</v-radio>
+                >Yellow</m-radio>
             </div>
             <div class="input-field">
-                <v-radio name="radio"
+                <m-radio name="radio"
                        id="radio3"
                        with-gap
-                >Green</v-radio>
+                >Green</m-radio>
             </div>
             <div class="input-field">
-                <v-radio name="radio"
+                <m-radio name="radio"
                        id="radio4"
                        disabled
-                >Brown</v-radio>
+                >Brown</m-radio>
             </div>
             <markup html='
             <div class="input-field">
-                <v-radio name="radio"
+                <m-radio name="radio"
                        id="radio3"
                        with-gap
                        val="1"
                        v-model="radio1"
-                >Green</v-radio>
+                >Green</m-radio>
             </div>'
             ></markup>
             <p>In order to accommodate v-model on Materialize.css components, to set what the value of the radio is, use the :val property.</p>
             <props :props="radio_props"></props>
-        </v-grid>
-        <v-grid s12>
+        </m-grid>
+        <m-grid s12>
             <h4>Checkboxes</h4>
             <div class="input-field">
-                <v-checkbox name="checkbox"
+                <m-checkbox name="checkbox"
                           id="checkbox"
-                >Red</v-checkbox>
+                >Red</m-checkbox>
             </div>
             <div class="input-field">
-                <v-checkbox name="checkbox2"
+                <m-checkbox name="checkbox2"
                           id="checkbox2"
                           checked
-                >Yellow</v-checkbox>
+                >Yellow</m-checkbox>
             </div>
             <div class="input-field">
-                <v-checkbox name="checkbox3"
+                <m-checkbox name="checkbox3"
                           id="checkbox3"
                           filled-in
                           checked
-                >Filled In</v-checkbox>
+                >Filled In</m-checkbox>
             </div>
             <div class="input-field">
-                <v-checkbox name="checkbox"
+                <m-checkbox name="checkbox"
                           id="checkbox"
                           indeterminate
-                >Indeterminate</v-checkbox>
+                >Indeterminate</m-checkbox>
             </div>
             <div class="input-field">
-                <v-checkbox name="checkbox3"
+                <m-checkbox name="checkbox3"
                           id="checkbox3"
                           disabled
                           checked
-                >Green</v-checkbox>
+                >Green</m-checkbox>
             </div>
             <div class="input-field">
-                <v-checkbox name="checkbox3"
+                <m-checkbox name="checkbox3"
                           id="checkbox3"
                           disabled
-                >Brown</v-checkbox>
+                >Brown</m-checkbox>
             </div>
             <markup html='
             <div class="input-field">
-                <v-checkbox name="checkbox3"
+                <m-checkbox name="checkbox3"
                           id="checkbox3"
                           filled-in
                           checked
-                >Filled In</v-checkbox>
+                >Filled In</m-checkbox>
             </div>'
             ></markup>
             <props :props="checkbox_props"></props>
-        </v-grid>
-        <v-grid s12>
+        </m-grid>
+        <m-grid s12>
             <h4>Switches</h4>
-            <v-switch></v-switch>
+            <m-switch></m-switch>
             <p></p><p></p>
-            <v-switch checked
+            <m-switch checked
                     on="Accept"
                     off="Deny"
-            ></v-switch>
+            ></m-switch>
             <markup html='
-            <v-switch checked
+            <m-switch checked
                     on="Accept"
                     off="Deny"
-            ></v-switch>'
+            ></m-switch>'
             ></markup>
             <props :props="switch_props"></props>
-        </v-grid>
-        <v-grid s12>
+        </m-grid>
+        <m-grid s12>
             <h4>File Input</h4>
             <div class="input-field">
-                <v-file-input></v-file-input>
+                <m-file-input></m-file-input>
             </div>
             <markup html='
             <div class="input-field">
-                <v-file-input></v-file-input>
+                <m-file-input></m-file-input>
             </div>'
             ></markup>
             <h4>Multiple</h4>
             <div class="input-field">
-                <v-file-input multiple></v-file-input>
+                <m-file-input multiple></m-file-input>
             </div>
             <markup html='
             <div class="input-field">
-                <v-file-input multiple></v-file-input>
+                <m-file-input multiple></m-file-input>
             </div>'
             ></markup>
             <props :props="file_props"></props>
-        </v-grid>
-        <v-grid s12>
+        </m-grid>
+        <m-grid s12>
             <h4>Range</h4>
             <div class="input-field">
-                <v-range></v-range>
+                <m-range></m-range>
             </div>
             <markup html='
             <div class="input-field">
-                <v-range></v-range>
+                <m-range></m-range>
             </div>'
             ></markup>
             <props :props="range_props"></props>
-        </v-grid>
-        <v-grid s12>
+        </m-grid>
+        <m-grid s12>
             <h4>Date Picker</h4>
             <label for="birthdate">Birthdate</label>
-            <v-date-input id="birthdate"
+            <m-date-input id="birthdate"
                         name="birthdate"
-            ></v-date-input>
+            ></m-date-input>
             <markup html='
             <label for="birthdate">Birthdate</label>
-            <v-date-input id="birthdate"
+            <m-date-input id="birthdate"
                         name="birthdate"
-            ></v-date-input>'
+            ></m-date-input>'
             ></markup>
             <props :props="[['v-model', 'string']]"></props>
-        </v-grid>
-        <v-grid s12>
+        </m-grid>
+        <m-grid s12>
             <h4>Character Counter</h4>
             <div class="input-field">
-                <v-text-input name="text"
+                <m-text-input name="text"
                             id="text"
                             length="50"
-                ></v-text-input>
+                ></m-text-input>
                 <label for="text">Text Input</label>
             </div>
             <markup html='
             <div class="input-field">
-                <v-text-input name="text"
+                <m-text-input name="text"
                             id="text"
                             length="50"
-                ></v-text-input>
+                ></m-text-input>
                 <label for="text">Text Input</label>
             </div>'
             ></markup>
             <div class="input-field">
-                <v-text-area name="textarea"
+                <m-text-area name="textarea"
                             id="textarea"
                             length="150"
-                ></v-text-area>
+                ></m-text-area>
                 <label for="text">Text Area</label>
             </div>
             <markup html='
             <div class="input-field">
-                <v-text-area name="textarea"
+                <m-text-area name="textarea"
                             id="textarea"
                             length="50"
-                ></v-text-area>
+                ></m-text-area>
                 <label for="text">Text Area</label>
             </div>'
             ></markup>
-        </v-grid>
+        </m-grid>
     </form>
 </template>
 

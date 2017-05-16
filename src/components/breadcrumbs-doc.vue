@@ -1,27 +1,27 @@
 <template>
     <div class="col s12">
         <h4>Example</h4>
-        <v-breadcrumbs :items="items"></v-breadcrumbs>
+        <m-breadcrumbs :items="items"></m-breadcrumbs>
         <markup html='
-        <v-breadcrumbs :items="items"></v-breadcrumbs>'
+        <m-breadcrumbs :items="items"></m-breadcrumbs>'
         ></markup>
         <h4>Slot</h4>
-        <v-breadcrumbs>
+        <m-breadcrumbs>
             <a v-for="item in items"
                :href="item.href"
                class="breadcrumb"
             >
                 {{ item.text }}
             </a>
-        </v-breadcrumbs>
+        </m-breadcrumbs>
         <markup html='
-        <v-breadcrumbs>
+        <m-breadcrumbs>
             <a v-for="item in items"
                :href="item.href"
                class="breadcrumb"
-               v-text="item.text">
+               m-text="item.text">
             </a>
-        </v-breadcrumbs>'
+        </m-breadcrumbs>'
         ></markup>
         <h4>Array</h4>
         <markup html="

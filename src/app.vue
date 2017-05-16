@@ -7,11 +7,11 @@
         </header>
 
         <main>
-            <v-container>
-                <v-row>
+            <m-container>
+                <m-row>
                     <component :is="component" :show="show"></component>
-                </v-row>
-            </v-container>
+                </m-row>
+            </m-container>
         </main>
 
         <main-footer></main-footer>

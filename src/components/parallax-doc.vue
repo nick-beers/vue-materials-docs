@@ -1,17 +1,17 @@
 <template>
     <div class="col s12">
         <h4>Examples</h4>
-        <v-parallax src="http://materializecss.com/images/parallax1.jpg"></v-parallax>
+        <m-parallax src="http://materializecss.com/images/parallax1.jpg"></m-parallax>
         <markup html='
-        <v-parallax src="http://materializecss.com/images/parallax1.jpg"></v-parallax>'
+        <m-parallax src="http://materializecss.com/images/parallax1.jpg"></m-parallax>'
         ></markup>
-        <v-parallax src="http://materializecss.com/images/parallax1.jpg"
+        <m-parallax src="http://materializecss.com/images/parallax1.jpg"
                   :height="250"
-        ></v-parallax>
+        ></m-parallax>
         <markup html='
-        <v-parallax src="http://materializecss.com/images/parallax1.jpg"
+        <m-parallax src="http://materializecss.com/images/parallax1.jpg"
                   :height="250"
-        ></v-parallax>'
+        ></m-parallax>'
         ></markup>
         <props :props="props"></props>
     </div>

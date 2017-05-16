@@ -1,43 +1,43 @@
 <template>
     <div class="col s12">
         <h4>Examples</h4>
-        <v-nav>
+        <m-nav>
             <a href="#!" class="brand-logo" slot="logo">Logo</a>
             <ul class="right">
                 <li v-for="n in 3">
                     <a href="#!">Item</a>
                 </li>
             </ul>
-            <v-side-nav id="side" slot="side-nav"></v-side-nav>
-        </v-nav>
+            <m-side-nav id="side" slot="side-nav"></m-side-nav>
+        </m-nav>
         <markup html='
-        <v-nav>
+        <m-nav>
             <a href="#!" class="brand-logo" slot="logo">Logo</a>
             <ul slot="items" class="right">
                 <li v-for="n in 3">
                     <a href="#!">Item</a>
                 </li>
             </ul>
-            <v-side-nav id="side" slot="side-nav"></v-side-nav>
-        </v-nav>'
+            <m-side-nav id="side" slot="side-nav"></m-side-nav>
+        </m-nav>'
         ></markup>
         <h4>With Icons</h4>
-        <v-nav nav-class="blue">
+        <m-nav nav-class="blue">
             <a href="#!" class="brand-logo" slot="logo">Logo</a>
             <ul class="right">
                 <li>
-                    <a href="#!"><v-icon>done</v-icon></a>
+                    <a href="#!"><m-icon>done</m-icon></a>
                 </li>
                 <li>
-                    <a href="#!"><v-icon>list</v-icon></a>
+                    <a href="#!"><m-icon>list</m-icon></a>
                 </li>
                 <li>
-                    <a href="#!" v-dropdown:icon-drop><v-icon>more_vert</v-icon></a>
+                    <a href="#!" v-m-dropdown:icon-drop><m-icon>more_vert</m-icon></a>
                 </li>
             </ul>
-            <v-side-nav id="side2" slot="side-nav"></v-side-nav>
-        </v-nav>
-        <v-dropdown id="icon-drop">
+            <m-side-nav id="side2" slot="side-nav"></m-side-nav>
+        </m-nav>
+        <m-dropdown id="icon-drop">
             <li>
                 <a href="#!">Click me</a>
             </li>
@@ -47,24 +47,24 @@
             <li>
                 <a href="#!">Click me</a>
             </li>
-        </v-dropdown>
+        </m-dropdown>
         <markup html='
-        <v-nav nav-class="blue">
+        <m-nav nav-class="blue">
             <a href="#!" class="brand-logo" slot="logo">Logo</a>
             <ul class="right">
                 <li>
-                    <a href="#!"><v-icon>done</v-icon></a>
+                    <a href="#!"><m-icon>done</m-icon></a>
                 </li>
                 <li>
-                    <a href="#!"><v-icon>list</v-icon></a>
+                    <a href="#!"><m-icon>list</m-icon></a>
                 </li>
                 <li>
-                    <a href="#!" v-dropdown:v-icon-drop><v-icon>more_vert</v-icon></a>
+                    <a href="#!" m-dropdown:m-icon-drop><m-icon>more_vert</m-icon></a>
                 </li>
             </ul>
-            <v-side-nav id="side2" slot="side-nav"></v-side-nav>
-        </v-nav>
-        <dropdown id="v-icon-drop">
+            <m-side-nav id="side2" slot="side-nav"></m-side-nav>
+        </m-nav>
+        <dropdown id="m-icon-drop">
             <li>
                 <a href="#!">Click me</a>
             </li>

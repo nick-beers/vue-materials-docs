@@ -1,20 +1,20 @@
 <template>
     <div class="col s12">
         <h4>Examples</h4>
-        <v-material-box src="http://materializecss.com/images/sample-1.jpg"></v-material-box>
+        <m-material-box src="http://materializecss.com/images/sample-1.jpg"></m-material-box>
         <markup html='
-        <v-material-box src="http://materializecss.com/images/sample-1.jpg"></v-material-box>'
+        <m-material-box src="http://materializecss.com/images/sample-1.jpg"></m-material-box>'
         ></markup>
         <h4>Captions</h4>
-        <v-material-box :width="250" 
+        <m-material-box :width="250" 
                       src="http://th01.deviantart.net/fs70/PRE/i/2013/126/1/e/nature_portrait_by_pw_fotografie-d63tx0n.jpg"
                       caption="I'm a caption"
-        ></v-material-box>
+        ></m-material-box>
         <markup html='
-        <v-material-box :width="250" 
+        <m-material-box :width="250" 
                       src="http://th01.deviantart.net/fs70/PRE/i/2013/126/1/e/nature_portrait_by_pw_fotografie-d63tx0n.jpg"
                       caption="Caption"
-        ></v-material-box>'
+        ></m-material-box>'
         ></markup>
         <props :props="props"></props>
     </div>

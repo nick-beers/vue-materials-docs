@@ -1,23 +1,23 @@
 <template>
     <div class="col s12">
         <h4>Example</h4>
-        <v-btn-link v-side-nav:demo="{ edge: 'right' }">Click Me</v-btn-link>
-        <v-side-nav id="demo">
-            <ul>
-                <li v-for="n in 5">
-                    <a href="#!">Link</a>
-                </li>
-            </ul>
-        </v-side-nav>
+        <m-btn-link v-m-side-nav:demo="nav">Click Me</m-btn-link>
+            <m-side-nav id="demo">
+                <ul>
+                    <li v-for="n in 5">
+                        <a href="#!">Link</a>
+                    </li>
+                </ul>
+            </m-side-nav>
         <markup html='
-        <v-btn-link v-side-nav:demo="nav">Click Me</v-btn-link>
-        <v-side-nav id="demo">
+        <m-btn-link v-m-side-nav:demo="nav">Click Me</m-btn-link>
+        <m-side-nav id="demo">
             <ul>
                 <li v-for="n in 5">
                     <a href="#!">Link</a>
                 </li>
             </ul>
-        </v-side-nav>'
+        </m-side-nav>'
         ></markup>
         <markup html="
         export default {

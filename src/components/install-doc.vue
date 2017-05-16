@@ -1,5 +1,5 @@
 <template>
-    <v-grid s12>
+    <m-grid s12>
         <h4>NPM</h4>
         <markup html='
         npm install vue-materials'
@@ -22,5 +22,5 @@
         </body>
         '
         ></markup>
-    </v-grid>
+    </m-grid>
 </template>

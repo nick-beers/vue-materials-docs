@@ -1,76 +1,76 @@
 <template>
     <div class="col s12">
         <h4>Examples</h4>
-        <v-card panel>
+        <m-card panel>
             <div class="row">
                 <div class="col s6 m4 l2">
-                    <v-checkbox v-model="large" id="large" name="large">Large</v-checkbox>
+                    <m-checkbox v-model="large" id="large" name="large">Large</m-checkbox>
                 </div>
                 <div class="col s6 m4 l2">
-                    <v-checkbox v-model="disabled" id="disabled" name="disabled">Disabled</v-checkbox>
+                    <m-checkbox v-model="disabled" id="disabled" name="disabled">Disabled</m-checkbox>
                 </div>
                 <div class="col s6 m4 l2">
-                    <v-checkbox v-model="icon" id="v-icon" name="v-icon">icon</v-checkbox>
+                    <m-checkbox v-model="icon" id="m-icon" name="m-icon">icon</m-checkbox>
                 </div>
                 <div class="col s6 m4 l2">
-                    <v-checkbox v-model="waves" id="waves" name="waves">Waves</v-checkbox>
+                    <m-checkbox v-model="waves" id="waves" name="waves">Waves</m-checkbox>
                 </div>
                 <div class="col s6 m4 l2">
-                    <v-checkbox v-model="flat" id="flat" name="flat">Flat</v-checkbox>
+                    <m-checkbox v-model="flat" id="flat" name="flat">Flat</m-checkbox>
                 </div>
                 <div class="col s6 m4 l2">
-                    <v-checkbox v-model="floating" id="floating" name="floating">Floating</v-checkbox>
+                    <m-checkbox v-model="floating" id="floating" name="floating">Floating</m-checkbox>
                 </div>
             </div>
             <div class="center">
-                <v-btn :large="large"
+                <m-btn :large="large"
                      :disabled="disabled"
                      :waves-light="waves"
                      :flat="flat"
                      :floating="floating"
-                ><span v-if="!floating">Button</span> <v-icon v-if="icon || floating" right>list</v-icon></v-btn>
+                ><span v-if="!floating">Button</span> <m-icon v-if="icon || floating" right>list</m-icon></m-btn>
             </div>
-        </v-card>
+        </m-card>
         <markup html="
-        <v-btn>Button</v-btn>"></markup>
+        <m-btn>Button</m-btn>"></markup>
         <markup html='
-        <v-btn-link href="#!">Button</v-btn-link>'></markup>
+        <m-btn-link href="#!">Button</m-btn-link>'></markup>
         <props :props="button_props"></props>
         <waves :waves="button_waves"></waves>
         <h4>Fixed Action Button</h4>
-        <v-fab icon="list" horizontal>
+        <m-fab icon="list" horizontal>
             <ul slot="items">
                 <li>
-                    <v-btn-link floating class="red"><v-icon>insert_chart</v-icon></v-btn-link>
+                    <m-btn-link floating class="red"><m-icon>insert_chart</m-icon></m-btn-link>
                 </li>
                 <li>
-                    <v-btn-link floating class="yellow darken-1"><v-icon>format_quote</v-icon></v-btn-link>
+                    <m-btn-link floating class="yellow darken-1"><m-icon>format_quote</m-icon></m-btn-link>
                 </li>
                 <li>
-                    <v-btn-link floating class="green"><v-icon>publish</v-icon></v-btn-link>
+                    <m-btn-link floating class="green"><m-icon>publish</m-icon></m-btn-link>
                 </li>
                 <li>
-                    <v-btn-link floating class="blue"><v-icon>attach_file</v-icon></v-btn-link>
+                    <m-btn-link floating class="blue"><m-icon>attach_file</m-icon></m-btn-link>
                 </li>
             </ul>
-        </v-fab>
+        </m-fab>
         <markup html='
-        <v-fab icon="list" horizontal>
+        <m-fab icon="list" horizontal>
             <ul slot="items">
                 <li>
-                    <v-btn-link floating class="red"><v-icon>insert_chart</v-icon></v-btn-link>
+                    <m-btn-link floating class="red"><m-icon>insert_chart</m-icon></m-btn-link>
                 </li>
                 <li>
-                    <v-btn-link floating class="yellow darken-1"><v-icon>format_quote</v-icon></v-btn-link>
+                    <m-btn-link floating class="yellow darken-1"><m-icon>format_quote</m-icon></m-btn-link>
                 </li>
                 <li>
-                    <v-btn-link floating class="green"><v-icon>publish</v-icon></v-btn-link>
+                    <m-btn-link floating class="green"><m-icon>publish</m-icon></m-btn-link>
                 </li>
                 <li>
-                    <v-btn-link floating class="blue"><v-icon>attach_file</v-icon></v-btn-link>
+                    <m-btn-link floating class="blue"><m-icon>attach_file</m-icon></m-btn-link>
                 </li>
             </ul>
-        </v-fab>'
+        </m-fab>'
         ></markup>
         <props :props="fab_props"></props>
     </div>
@@ -114,7 +114,7 @@
 </script>
 
 <style scoped>
-    .v-btn {
+    .m-btn {
         margin-bottom: 1rem;
     }
 </style>

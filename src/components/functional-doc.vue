@@ -2,15 +2,15 @@
     <div class="col s12">
         <h4>Container</h4>
         <markup html='
-        <v-container></v-container>'
+        <m-container></m-container>'
         ></markup>
         <h4>Row</h4>
         <markup html='
-        <v-row></v-row>'
+        <m-row></m-row>'
         ></markup>
         <h4>Grid</h4>
         <markup html='
-        <v-grid s12 m6 l4></v-grid>'
+        <m-grid s12 m6 l4></m-grid>'
         ></markup>
         <h4>Info</h4>
         <p>

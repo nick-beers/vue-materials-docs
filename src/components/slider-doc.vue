@@ -1,17 +1,17 @@
 <template>
     <div class="col s12">
         <h4>Example</h4>
-        <v-slider>
-            <v-slide src="http://lorempixel.com/580/250/nature/1">v-slide 1</v-slide>
-            <v-slide src="http://lorempixel.com/580/250/nature/2">v-slide 2</v-slide>
-            <v-slide src="http://lorempixel.com/580/250/nature/3">v-slide 3</v-slide>
-        </v-slider>
+        <m-slider>
+            <m-slide src="http://lorempixel.com/580/250/nature/1">v-slide 1</m-slide>
+            <m-slide src="http://lorempixel.com/580/250/nature/2">v-slide 2</m-slide>
+            <m-slide src="http://lorempixel.com/580/250/nature/3">v-slide 3</m-slide>
+        </m-slider>
         <markup html='
-        <v-slider>
-            <v-slide src="http://lorempixel.com/580/250/nature/1">v-slide 1</v-slide>
-            <v-slide src="http://lorempixel.com/580/250/nature/2">v-slide 2</v-slide>
-            <v-slide src="http://lorempixel.com/580/250/nature/3">v-slide 3</v-slide>
-        </v-slider>'
+        <m-slider>
+            <m-slide src="http://lorempixel.com/580/250/nature/1">v-slide 1</m-slide>
+            <m-slide src="http://lorempixel.com/580/250/nature/2">v-slide 2</m-slide>
+            <m-slide src="http://lorempixel.com/580/250/nature/3">v-slide 3</m-slide>
+        </m-slider>'
         ></markup>
         <props :props="props"></props>
     </div>

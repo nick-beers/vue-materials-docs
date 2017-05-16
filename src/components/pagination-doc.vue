@@ -1,26 +1,26 @@
 <template>
     <div class="col s12">
         <h4>Examples</h4>
-        <v-pagination :length="10" 
+        <m-pagination :length="10" 
                     v-model="selected"
-        ></v-pagination>
+        ></m-pagination>
         <markup html='
-        <v-pagination :length="10" 
+        <m-pagination :length="10" 
                     v-model="selected"
-        ></v-pagination>'
+        ></m-pagination>'
         ></markup>
-        <v-pagination color="blue"
+        <m-pagination color="blue"
                     waves
                     :length="5"
                     v-model="active"
                     @click="update"
-        ></v-pagination>
+        ></m-pagination>
         <markup html='
-        <v-pagination color="blue"
+        <m-pagination color="blue"
                     waves
                     :length="5"
                     v-model="active"
-        ></v-pagination>'
+        ></m-pagination>'
         ></markup>
         <props :props="props"></props>
     </div>

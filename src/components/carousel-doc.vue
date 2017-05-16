@@ -1,22 +1,22 @@
 <template>
     <div class="col s12">
         <h4>carousel w/ srcs</h4>
-        <v-carousel :items="items"></v-carousel>
+        <m-carousel :items="items"></m-carousel>
         <markup html='
-        <v-carousel :items="items"></v-carousel>'
+        <m-carousel :items="items"></m-carousel>'
         ></markup>
         <h4>carousel w/ slot</h4>
-        <v-carousel>
-            <v-carousel-item v-for="item in items"
+        <m-carousel>
+            <m-carousel-item v-for="item in items"
                            :src="item"
-            ></v-carousel-item>
-        </v-carousel>
+            ></m-carousel-item>
+        </m-carousel>
         <markup html='
-        <v-carousel>
-            <v-carousel-item v-for="item in items"
+        <m-carousel>
+            <m-carousel-item v-for="item in items"
                            :src="item"
-            ></v-carousel-item>
-        </v-carousel>'
+            ></m-carousel-item>
+        </m-carousel>'
         ></markup>
         <props :props="props"></props>
     </div>

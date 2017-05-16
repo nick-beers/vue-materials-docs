@@ -1,15 +1,15 @@
 <template>
     <div class="col s12">
         <h4>Example</h4>
-        <v-range></v-range>
+        <m-range></m-range>
         <markup html='
-        <v-range></v-range>'
+        <m-range></m-range>'
         ></markup>
         <h4>Model</h4>
-        <v-range v-model="range"></v-range>
+        <m-range v-model="range"></m-range>
         <h5 class="center">{{ range }}</h5>
         <markup html='
-        <v-range v-model="range"></v-range>'
+        <m-range v-model="range"></m-range>'
         ></markup>
         <props :props="props"></props>
     </div>

@@ -1,18 +1,18 @@
 <template>
-    <v-nav class="nav-header">
+    <m-nav class="nav-header">
         <div>
             <h1 class="page-title">
                 <a href="#!"
                    class="left button-collapse"
-                   v-side-nav:side-nav="nav"
+                   v-m-side-nav:side-nav
                    ref="nav"
                 >
-                    <v-icon>menu</v-icon>
+                    <m-icon>menu</m-icon>
                 </a>
                 {{ title }}
             </h1>
         </div>
-        <v-side-nav slot="side-nav"
+        <m-side-nav slot="side-nav"
                     id="side-nav"
                     fixed
         >
@@ -26,14 +26,14 @@
                     ></a>
                 </li>
                 <li class="no-padding" v-else>
-                    <v-collapsible collapse >
+                    <m-collapsible collapse >
                         <li>
-                            <v-collapsible-header class="black-text waves-effect waves-teal"
+                            <m-collapsible-header class="black-text waves-effect waves-teal"
                                                 ref="collapse"
                             >
                                 {{ key }}
-                            </v-collapsible-header>
-                            <v-collapsible-body>
+                            </m-collapsible-header>
+                            <m-collapsible-body>
                                 <ul>
                                     <li v-for="item in value"
                                         :class="{ 'active': title === item }"
@@ -43,13 +43,13 @@
                                         >{{ item }}</a>
                                     </li>
                                 </ul>
-                            </v-collapsible-body>
+                            </m-collapsible-body>
                         </li>
-                    </v-collapsible>
+                    </m-collapsible>
                 </li>
             </template>
-        </v-side-nav>
-    </v-nav>
+        </m-side-nav>
+    </m-nav>
 </template>
 
 <script>

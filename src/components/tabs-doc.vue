@@ -1,22 +1,22 @@
 <template>
     <div class="col s12">
         <h4>Example</h4>
-        <v-tabs>
-            <v-tab :target="'#tab' + n" v-for="n in 5">Tab {{ n }}</v-tab>
-        </v-tabs>
+        <m-tabs>
+            <m-tab :target="'#tab' + n" v-for="n in 5">Tab {{ n }}</m-tab>
+        </m-tabs>
         <markup html='
-        <v-tabs>
-            <v-tab target="#tab1">Tab 1</v-tab>
-            <v-tab target="#tab2">Tab 2</v-tab>
-            <v-tab target="#tab3">Tab 3</v-tab>
-        </v-tabs>'
+        <m-tabs>
+            <m-tab target="#tab1">Tab 1</m-tab>
+            <m-tab target="#tab2">Tab 2</m-tab>
+            <m-tab target="#tab3">Tab 3</m-tab>
+        </m-tabs>'
         ></markup>
-        <v-tabs>
-            <v-tab :target="'#tab' + n" v-for="n in 10">Tab {{ n }}</v-tab>
-        </v-tabs>
+        <m-tabs>
+            <m-tab :target="'#tab' + n" v-for="n in 10">Tab {{ n }}</m-tab>
+        </m-tabs>
         <props :props="tabs_props"></props>
         <markup html='
-        <v-tab>Tab</v-tab>'
+        <m-tab>Tab</m-tab>'
         ></markup>
         <props :props="tab_props"></props>
     </div>
