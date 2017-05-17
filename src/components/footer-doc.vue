@@ -1,7 +1,7 @@
 <template>
     <div class="col s12">
         <h4>Examples</h4>
-        <v-footer>
+        <m-footer>
             <div class="container" slot="content">
                 <div class="row">
                     <div class="col l6 s12">
@@ -20,9 +20,9 @@
                 </div>
             </div>
             <div class="container" slot="copyright">&copy; Copyright 2016</div>    
-        </v-footer>
+        </m-footer>
         <markup html='
-        <v-footer>
+        <m-footer>
             <div class="container" slot="content">
                 <div class="row">
                     <div class="col l6 s12">
@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="container" slot="copyright">&copy; Copyright 2016</div>    
-        </v-footer>'
+        </m-footer>'
         ></markup>
     </div>
 </template>
