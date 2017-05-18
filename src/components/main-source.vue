@@ -42,9 +42,3 @@
         }
     }
 </script>
-
-<style scoped>
-    .row {
-        margin-bottom: 0 !important;
-    }
-</style>

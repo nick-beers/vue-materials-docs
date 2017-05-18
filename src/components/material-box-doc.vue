@@ -7,12 +7,12 @@
         ></markup>
         <h4>Captions</h4>
         <m-material-box :width="250" 
-                      src="http://th01.deviantart.net/fs70/PRE/i/2013/126/1/e/nature_portrait_by_pw_fotografie-d63tx0n.jpg"
+                      src="http://lorempixel.com/800/400/nature/4"
                       caption="I'm a caption"
         ></m-material-box>
         <markup html='
         <m-material-box :width="250" 
-                      src="http://th01.deviantart.net/fs70/PRE/i/2013/126/1/e/nature_portrait_by_pw_fotografie-d63tx0n.jpg"
+                      src="http://lorempixel.com/800/400/nature/4"
                       caption="Caption"
         ></m-material-box>'
         ></markup>

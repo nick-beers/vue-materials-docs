@@ -24,16 +24,16 @@
         <h4>Tooltips</h4>
         <m-row>
             <m-grid s12 m6 l3>
-                <m-btn class="red" v-m-tooltip:top="'Tooltip Top'">Top</m-btn>
+                <m-btn class="deep-purple" v-m-tooltip:top="'Tooltip Top'">Top</m-btn>
             </m-grid>
             <m-grid s12 m6 l3>
-                <m-btn class="red" v-m-tooltip:right="'Tooltip Right'">Right</m-btn>
+                <m-btn class="deep-purple" v-m-tooltip:right="'Tooltip Right'">Right</m-btn>
             </m-grid>
             <m-grid s12 m6 l3>
-                <m-btn class="red" v-m-tooltip:bottom="'Tooltip Bottom'">Bottom</m-btn>
+                <m-btn class="deep-purple" v-m-tooltip:bottom="'Tooltip Bottom'">Bottom</m-btn>
             </m-grid>
             <m-grid s12 m6 l3>
-                <m-btn class="red" v-m-tooltip:left="'Tooltip Left'">Left</m-btn>
+                <m-btn class="deep-purple" v-m-tooltip:left="'Tooltip Left'">Left</m-btn>
             </m-grid>
         </m-row>
         <markup html='
