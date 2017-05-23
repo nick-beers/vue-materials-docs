@@ -38,6 +38,7 @@ import DirectivesDoc from './directives-doc.vue'
 import InstallDoc from './install-doc.vue'
 import DialogDoc from './dialog-doc.vue'
 import FormsDoc from './forms-doc.vue'
+import TableDoc from './table-doc.vue'
 
 export default {
     FormsDoc,
@@ -79,5 +80,6 @@ export default {
     FileInputDoc,
     FooterDoc,
     IconDoc,
-    NavDoc
+    NavDoc,
+    TableDoc
 }
