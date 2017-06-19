@@ -1,73 +1,28 @@
 <template>
     <div class="col s12">
         <h4>Example</h4>
-        <m-table bordered responsive highlight :columns="columns" :tableData="tableData" :rowKey="tableKey"></m-table>
+        <m-table bordered responsive highlight :options="options" :columns="columns" :tableData="data"></m-table>
         <markup html='
-        <m-table bordered responsive highlight :columns="columns" :tableData="tableData" :rowKey="tableKey"></m-table>'></markup>
+        <m-table bordered responsive highlight :options="options" :columns="columns" :tableData="data"></m-table>'></markup>
 
         <p>
-            The table columns are sortable by clicking on the headers and have a multi-sort capability by using <b>ctrl + click</b> to sort by multiple columns. To exclude columns from rendering just leave it out of the columns list. The <b>tableKey</b> property is required by the transition-group and optimizes the row rendering against your tableData source.
+            The table columns are sortable by clicking on the headers and have a multi-sort capability by using <b>ctrl + click</b> to sort by multiple columns. To exclude columns from rendering just leave it out of the columns list. The table is designed to be a display system so filtering is expected to be done against the master dataset before being passed into the tableData prop.
         </p>
 
         <markup html="
-            export default {
-                data () {
-                    return {
-                        columns: [ 
-                            { name: 'id', hasSort: true },
-                            { name: 'firstname', hasSort: true },
-                            { name: 'lastname', hasSort: false },
-                            { name: 'active', hasSort: true },
-                        ],
-                        tableKey: 'id',
-                        tableData: [
-                            { id: 1, firstname: 'Sarah', lastname: 'Alpha', active: true },
-                            { id: 2, firstname: 'Sarah', lastname: 'Delta', active: false },
-                            { id: 3, firstname: 'Johnathan James', lastname: 'Delta', active: true },
-                            { id: 4, firstname: 'Marshall', lastname: 'Beta', active: false },
-                            { id: 5, firstname: 'Marshall', lastname: 'Charlie', active: true },
-                            { id: 6, firstname: 'Sarah', lastname: 'Alpha', active: true },
-                            { id: 7, firstname: 'Sarah', lastname: 'Delta', active: false },
-                            { id: 8, firstname: 'Johnathan James', lastname: 'Delta', active: true },
-                            { id: 9, firstname: 'Marshall', lastname: 'Beta', active: false },
-                            { id: 10, firstname: 'Marshall', lastname: 'Charlie', active: true },
-                            { id: 11, firstname: 'Sarah', lastname: 'Epsilon', active: true },
-                            { id: 12, firstname: 'Kevin', lastname: 'Foxtrot', active: false },
-                            { id: 13, firstname: 'Kevin', lastname: 'Gamma', active: true },
-                            { id: 14, firstname: 'Marshall', lastname: 'Beta', active: false },
-                            { id: 15, firstname: 'Albert', lastname: 'Charlie', active: true }
-                        ]
-                    }
-                }
-            }
-        "></markup>
-
-        <props :props="props"></props>
-    </div>
-</template>
-
-<script>
-    export default {
+export default {
         data () {
             return {
-                props: [
-                    ['tableKey (required)', 'string'],
-                    ['columns', 'array of { name: string, hasSort: boolean }'],
-                    ['tableData', 'array'],
-                    ['bordered', 'boolean'],
-                    ['striped', 'boolean'],
-                    ['highlight', 'boolean'],
-                    ['centered', 'boolean'],
-                    ['responsive', 'boolean']
-                ],
-                columns: [ 
-                    { name: 'id', hasSort: true },
-                    { name: 'firstname', hasSort: true },
-                    { name: 'lastname', hasSort: false },
-                    { name: 'active', hasSort: true },
-                ],
-                tableKey: 'id',
-                tableData: [
+                columns: [ 'id', 'firstname', 'lastname', 'active'],
+                options: {
+                    rowKey: 'id',
+                    paging: true,
+                    pagingDefault: 5,
+                    pagingOptions: [5,10,25,50],
+                    sortable: true,
+                    selectable:true
+                },
+                data: [
                     { id: 1, firstname: 'Sarah', lastname: 'Alpha', active: true },
                     { id: 2, firstname: 'Sarah', lastname: 'Delta', active: false },
                     { id: 3, firstname: 'Johnathan James', lastname: 'Delta', active: true },
@@ -84,6 +39,74 @@
                     { id: 14, firstname: 'Marshall', lastname: 'Beta', active: false },
                     { id: 15, firstname: 'Albert', lastname: 'Charlie', active: true }
                 ]
+            }
+        }
+    }
+        "></markup>
+
+        <props :props="props"></props>
+        <p>
+            The columns object reflects all columns that will be included in the table, the table headers currently reflect the property names and are capitalized automatically by the table control. 
+        </p>
+        <p>
+            The options.rowKey is expected to be a unique property to enable controls and improve the rendering of the table rows based on Vue's key property.
+        </p>
+
+        <props :props="events" title="Events" col1="Event" col2="Return Type"></props>
+        <p>
+            The only event emitted currently will trigger whenever a checkbox is clicked on the table controls. The selection currently persists across multiple pages allowing for bulk selection. 
+        </p>
+    </div>
+</template>
+
+<script>
+    export default {
+        data () {
+            return {
+                props: [
+                    ['bordered', 'boolean'],
+                    ['striped', 'boolean'],
+                    ['highlight', 'boolean'],
+                    ['centered', 'boolean'],
+                    ['responsive', 'boolean'],
+                    ['columns', 'array[String]'],
+                    ['tableData', 'array[Object]'],
+                    ['options.rowKey', 'string (default = \'id\')'],
+                    ['options.paging', 'boolean (default = false)'],
+                    ['options.pagingDefault', 'number (default = 5)'],
+                    ['options.pagingOptions', 'array[number] (default = [5, 10, 25, 50])'],
+                    ['options.sortable', 'boolean (default = true)'],
+                    ['options.selectable', 'boolean (default = false)']
+                ],
+                events: [
+                    ['selected-update', 'Array[rowKey]']
+                ],
+                columns: [ 'id', 'firstname', 'lastname', 'active'],
+                options: {
+                    rowKey: 'id',
+                    paging: true,
+                    pagingDefault: 5,
+                    pagingOptions: [5,10,25,50],
+                    sortable: true,
+                    selectable:true
+                },
+                data: [
+                    { id: 1, firstname: 'Sarah', lastname: 'Alpha', active: true },
+                    { id: 2, firstname: 'Sarah', lastname: 'Delta', active: false },
+                    { id: 3, firstname: 'Johnathan James', lastname: 'Delta', active: true },
+                    { id: 4, firstname: 'Marshall', lastname: 'Beta', active: false },
+                    { id: 5, firstname: 'Marshall', lastname: 'Charlie', active: true },
+                    { id: 6, firstname: 'Sarah', lastname: 'Alpha', active: true },
+                    { id: 7, firstname: 'Sarah', lastname: 'Delta', active: false },
+                    { id: 8, firstname: 'Johnathan James', lastname: 'Delta', active: true },
+                    { id: 9, firstname: 'Marshall', lastname: 'Beta', active: false },
+                    { id: 10, firstname: 'Marshall', lastname: 'Charlie', active: true },
+                    { id: 11, firstname: 'Sarah', lastname: 'Epsilon', active: true },
+                    { id: 12, firstname: 'Kevin', lastname: 'Foxtrot', active: false },
+                    { id: 13, firstname: 'Kevin', lastname: 'Gamma', active: true },
+                    { id: 14, firstname: 'Marshall', lastname: 'Beta', active: false },
+                    { id: 15, firstname: 'Albert', lastname: 'Charlie', active: true }
+                ],
             }
         }
     }

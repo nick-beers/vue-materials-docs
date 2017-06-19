@@ -1,11 +1,11 @@
 <template>
     <div>
-        <h4>Props</h4>
+        <h4>{{tableTitle}}</h4>
         <table>
             <thead>
                 <tr>
-                    <th>Prop</th>
-                    <th>Type</th>
+                    <th>{{firstHeader}}</th>
+                    <th>{{secondHeader}}</th>
                 </tr>
             </thead>
             <tbody>
@@ -19,6 +19,17 @@
 
 <script>
     export default {
-        props: ['props'],
+        props: ['props', 'title', 'col1', 'col2'],
+        computed: {
+            tableTitle(){
+                return this.title || 'Props';
+            },
+            firstHeader() {
+                return this.col1 || 'Prop';
+            },
+            secondHeader() {
+                return this.col2 || 'Type';
+            }
+        }
     }
 </script>

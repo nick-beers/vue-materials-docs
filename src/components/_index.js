@@ -39,6 +39,7 @@ import InstallDoc from './install-doc.vue'
 import DialogDoc from './dialog-doc.vue'
 import FormsDoc from './forms-doc.vue'
 import TableDoc from './table-doc.vue'
+import FeatureDiscoveryDoc from './feature-discovery-doc.vue'
 
 export default {
     FormsDoc,
@@ -81,5 +82,6 @@ export default {
     FooterDoc,
     IconDoc,
     NavDoc,
-    TableDoc
+    TableDoc,
+    FeatureDiscoveryDoc
 }
