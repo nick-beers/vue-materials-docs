@@ -40,6 +40,7 @@ import DialogDoc from './dialog-doc.vue'
 import FormsDoc from './forms-doc.vue'
 import TableDoc from './table-doc.vue'
 import FeatureDiscoveryDoc from './feature-discovery-doc.vue'
+import ScrollspyDoc from './scrollspy-doc.vue'
 
 export default {
     FormsDoc,
@@ -83,5 +84,6 @@ export default {
     IconDoc,
     NavDoc,
     TableDoc,
-    FeatureDiscoveryDoc
+    FeatureDiscoveryDoc,
+    ScrollspyDoc
 }

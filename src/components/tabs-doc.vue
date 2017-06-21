@@ -27,7 +27,11 @@
         data () {
             return {
                 tabs_props: [
-                    ['selected', 'boolean']
+                    ['selected', 'String ( Empty )'],
+                    ['tabsFixedWidth', 'boolean ( false )'],
+                    ['swipeable', 'boolean ( false )'],
+                    ['responsiveThreshold', 'Number ( Infinity )'],
+                    ['onShow', 'Function ( callback(tabReturnValue){  } )'],
                 ],
                 tab_props: [
                     ['active', 'boolean'],

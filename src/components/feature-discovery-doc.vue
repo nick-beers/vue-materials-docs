@@ -18,7 +18,9 @@
             </m-tap-target>'
             ></markup>
             <props :props="props"></props>
-
+            <p>
+                The dataActivates property is a string id and the <b>&lt;m-tap-target&gt;</b> will reposition to be focused around the dataActivates element.
+            </p>
 
         </m-grid>
     </div>
