@@ -28,6 +28,8 @@
                     ['linkList', 'Array[ { id: String, text: String } ]'],
                     ['scrollSpyTarget', 'String ( .scrollspy )'],
                     ['offset', 'String ( 200px )'],
+                    ['activeClass', 'String'],
+                    ['getActiveElement', 'Function']
                 ],
                 scrollSpyLinks: [
                     { id: "examples", text: "Examples" },

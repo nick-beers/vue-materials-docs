@@ -13,7 +13,16 @@
 export default {
         data () {
             return {
-                columns: [ 'id', 'firstname', 'lastname', 'active'],
+                columns: [ 
+                    'id', 
+                    { id: 'firstname', displayText: 'First Name'},
+                    { 
+                        id: 'lastname', 
+                        cellRenderer: function(ce, rd, co, vi) { 
+                            return  ce('td', {}, [ rd['lastname'].toString() ])}
+                        }, 
+                    'active' 
+                ],
                 options: {
                     rowKey: 'id',
                     paging: true,
@@ -43,10 +52,22 @@ export default {
         }
     }
         "></markup>
-
+        <h5>Columns and Column Data Object</h5>
+        <p>
+            The columns array can contain either a string matching the data object property, or it can contain a columnDataObject like the example below. The array may also support a combination of both like in the full table example. The cellRenderer must return a <b>&lt;td&gt;</b> as the parent element, but the cell renderer allows you to follow the <a href="https://vuejs.org/v2/guide/render-function.html">vue documentation on render functions</a> to create anything as the table cell contents with full programatic control. 
+        </p>
+        <markup html="
+        let columnDataObject = {
+            id: 'firstname',
+            displayText: 'First Name',
+            cellRenderer: function(createElement, rowData, column, vueInstance){
+                return createElement('td', {}, [rowData[column].toString()])
+            }
+        }
+        "></markup>
         <props :props="props"></props>
         <p>
-            The columns object reflects all columns that will be included in the table, the table headers currently reflect the property names and are capitalized automatically by the table control. 
+            The columns object reflects all columns that will be included in the table, the table headers will reflect the property names by default when using strings and are capitalized and separated on camelCase, underscores, and dashes. 
         </p>
         <p>
             The options.rowKey is expected to be a unique property to enable controls and improve the rendering of the table rows based on Vue's key property.
@@ -69,7 +90,7 @@ export default {
                     ['highlight', 'boolean'],
                     ['centered', 'boolean'],
                     ['responsive', 'boolean'],
-                    ['columns', 'array[String]'],
+                    ['columns', 'array[String | columnDataObject ]'],
                     ['tableData', 'array[Object]'],
                     ['options.rowKey', 'string (default = \'id\')'],
                     ['options.paging', 'boolean (default = false)'],
@@ -81,7 +102,12 @@ export default {
                 events: [
                     ['selected-update', 'Array[rowKey]']
                 ],
-                columns: [ 'id', 'firstname', 'lastname', 'active'],
+                columns: [ 
+                    'id', 
+                    { id: 'firstname', displayText: 'First Name'},
+                    { id: 'lastname', cellRenderer: function(ce, rd, co, vi) { return  ce('td', {}, [ rd['lastname'].toString() ])}}, 
+                    'active' 
+                ],
                 options: {
                     rowKey: 'id',
                     paging: true,

@@ -1,8 +1,13 @@
 <template>
     <div class="col s12">
         <h4>Examples</h4>
-        <date-input v-model="date"></date-input>
-        <main-source :show="show"></main-source>
+        <label id="dateInput">Date</label>
+        <m-date-input id="dateInput"></m-date-input>
+        <markup html='
+        <label id="dateInput">Date</label>
+        <m-date-input id="dateInput"></m-date-input>'
+        ></markup>
+        <props :props="props"></props>
     </div>
 </template>
 
@@ -12,7 +17,10 @@
 
         data () {
             return {
-                date: '7 July, 2016'
+                props: [
+                    ['value', 'String'],
+                    ['format', 'String']
+                ]
             }
         }
     }

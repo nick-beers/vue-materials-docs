@@ -70,4 +70,13 @@
     h4 {
         margin-top: 6rem;
     }
+
+    .bladeblue {
+        background-color: #007dc6 !important;
+    }
+
+    .bladegrey {
+        background-color: #54565b !important;
+    }
+    
 </style>

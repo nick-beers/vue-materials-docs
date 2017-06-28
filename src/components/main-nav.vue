@@ -1,6 +1,6 @@
 <template>
 <div>
-    <m-nav nav-class="top-nav deep-purple lighten-3">
+    <m-nav nav-class="top-nav bladeblue">
         <div class="container">
             <a class="page-title">{{ title }}</a>
         </div>
@@ -34,7 +34,7 @@
                         <m-collapsible-body>
                             <ul>
                                 <li v-for="item in value"
-                                    :class="{ 'active deep-purple lighten-3': title === item }"
+                                    :class="{ 'active bladeblue': title === item }"
                                 >
                                     <a :href="item" 
                                        @click.prevent="select(item)"
@@ -59,7 +59,7 @@
                     directives: 'Directives',
                     functional: 'Functional',
                     dialog: 'Dialog',
-                    Components: ['Badge', 'Breadcrumbs', 'Button', 'Card', 'Carousel', 'Chip', 'Collapsible', 'Collection', 'Dropdown', 'Footer', 'Forms', 'Icon', 'Material-Box', 'Modal', 'Nav', 'Pagination', 'Parallax', 'Progress-Circular', 'Progress-Linear', 'Range', 'Side-Nav', 'Slider', 'Tabs', 'Table' , 'Scrollspy', 'Feature-Discovery']
+                    Components: ['Badge', 'Breadcrumbs', 'Button', 'Card', 'Carousel', 'Chip', 'Collapsible', 'Collection', 'Dropdown', 'Footer', 'Forms', 'Date-Input', 'Time-Input', 'Icon', 'Material-Box', 'Modal', 'Nav', 'Pagination', 'Parallax', 'Progress-Circular', 'Progress-Linear', 'Range', 'Side-Nav', 'Slider', 'Tabs', 'Table' , 'Scrollspy', 'Feature-Discovery']
                 },
                 icon: 'keyboard_arrow_down',
                 nav: {

@@ -1,20 +1,20 @@
 <template>
-    <m-footer class="deep-purple lighten-3">
+    <m-footer class="bladeblue">
         <div class="container" slot="content">
             <div class="row center">
                 <div class="col s6">
-                    <m-btn-link class="deep-purple lighten-4" 
+                    <m-btn-link class="bladegrey" 
                               large
-                              href="https://github.com/johnleider/vue-materials"
+                              href="https://github.com/nick-beers/vue-materials"
                               target="_blank"
                     >
                         Github
                     </m-btn-link>
                 </div>
                 <div class="col s6">
-                    <m-btn-link class="deep-purple lighten-4"
+                    <m-btn-link class="bladegrey"
                               large
-                              href="https://www.npmjs.com/package/vue-materials"
+                              href="https://www.npmjs.com/package/@edge_blade/vue-materials"
                               target="_blank"
                     >
                         NPM
@@ -22,6 +22,6 @@
                 </div>
             </div>
         </div>
-        <div class="container" slot="copyright">©Copyright 2016 John Leider</div>
+        <div class="container" slot="copyright">©Copyright 2017 Nick Beers</div>
     </m-footer>
 </template>

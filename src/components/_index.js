@@ -17,6 +17,7 @@ import FunctionalDoc from './functional-doc.vue'
 import ModalDoc from './modal-doc.vue'
 import PaginationDoc from './pagination-doc.vue'
 import DateInputDoc from './date-input-doc.vue'
+import TimeInputDoc from './time-input-doc.vue'
 import FileInputDoc from './file-input-doc.vue'
 import FooterDoc from './footer-doc.vue'
 import IconDoc from './icon-doc.vue'
@@ -85,5 +86,6 @@ export default {
     NavDoc,
     TableDoc,
     FeatureDiscoveryDoc,
-    ScrollspyDoc
+    ScrollspyDoc,
+    TimeInputDoc
 }
