@@ -1,6 +1,6 @@
 <template>
     <m-grid s12>
-        <h4>NPM</h4>
+        <h4>NPM <i style="font-size: 16px;">Based on 1.4.1 of @edge_blade/vue-materials</i></h4>
         <markup html='
         npm install @edge_blade/vue-materials'
         ></markup>
