@@ -35,18 +35,22 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass']
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.css$/,
+        loaders: ['style-loader', 'css-loader']
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file',
+        loader: 'file-loader',
         query: {
           name: '[name].[ext]?[hash]'
         }
       },
       {
           test: /\.(eot|svg|ttf|woff|woff2)$/,
-          loader: 'file?name=/fonts/[name].[ext]'
+          loader: 'file-loader?name=fonts/[name].[ext]'
       }
     ]
   },
