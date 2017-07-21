@@ -88,7 +88,7 @@
                 <label for="ta2">Text Area</label>
             </div>'
             ></markup>
-            <props :props="[['length', 'string, number (works on input or m-text-area)']]"></props>
+            <props :props="text_props"></props>
         </m-grid>
         <m-grid s12>
             <h4>Select</h4>
@@ -355,6 +355,10 @@
                 ],
                 file_props: [
                     ['multiple', 'boolean']
+                ],
+                text_props: [
+                    ['length', 'string, number (works on input or m-text-area)'],
+                    ['validate', 'boolean (works on input or m-text-area)'],
                 ],
                 items: [
                     {

@@ -92,6 +92,7 @@ export default {
                     ['responsive', 'boolean'],
                     ['columns', 'array[String | columnDataObject ]'],
                     ['tableData', 'array[Object]'],
+                    ['selectedRows', 'array[(rowkey type)]'],
                     ['options.rowKey', 'string (default = \'id\')'],
                     ['options.paging', 'boolean (default = false)'],
                     ['options.pagingDefault', 'number (default = 5)'],
