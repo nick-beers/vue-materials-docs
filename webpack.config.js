@@ -56,7 +56,13 @@ module.exports = {
   plugins: [
     new webpackLinkPlugin({
       loadlModule: path.resolve(__dirname, '../@edge_blade/vue-materialize')
-    })
+    }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery",
+      'Vel': "materialize-css/js/velocity.min.js"
+    }),
   ],
 
   devServer: {
