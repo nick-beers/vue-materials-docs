@@ -89,6 +89,7 @@
             </div>'
             ></markup>
             <props :props="text_props"></props>
+            <props :props="text_events" title="Text Input and Text Area Events" col1="Event" col2="Return Type"></props>
         </m-grid>
         <m-grid s12>
             <h4>Select</h4>
@@ -127,7 +128,7 @@
                 <label for="select2">Select</label>
             </div>'
             ></markup>
-            <props :props="[['items', 'array, object values, [id, text]'], ['v-model', 'string, number, array (multiple)'], ['select-text', 'set the select text, default: Choose your options']]"></props>
+            <props :props="[['items', 'array, object values, [id, text]'], ['v-model', 'string, number, array (multiple)'], ['select-text', 'string (sets placeholder text)']]"></props>
         </m-grid>
         <m-grid s12>
             <h4>Radios</h4>
@@ -315,6 +316,7 @@
                 <label for="text">Text Area</label>
             </div>'
             ></markup>
+
         </m-grid>
     </form>
 </template>
@@ -359,6 +361,12 @@
                 text_props: [
                     ['length', 'string, number (works on input or m-text-area)'],
                     ['validate', 'boolean (works on input or m-text-area)'],
+                ],
+                text_events: [
+                    ['input', 'Value of Input'],
+                    ['change', 'Value of Input'],
+                    ['focus', 'Value of Input'],
+                    ['blur', 'Value of Input'],
                 ],
                 items: [
                     {

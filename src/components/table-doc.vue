@@ -60,12 +60,15 @@ export default {
         let columnDataObject = {
             id: 'firstname',
             displayText: 'First Name',
+            cellClasses: 'red-text bold-text',
+            headerClasses: 'blue-text italic-text',
             cellRenderer: function(createElement, rowData, column, vueInstance){
                 return createElement('td', {}, [rowData[column].toString()])
             }
         }
         "></markup>
-        <props :props="props"></props>
+        <props :props="columnDataProps" title="ColumnDataObject Props"></props>
+        <props :props="props" title="Table Props"></props>
         <p>
             The columns object reflects all columns that will be included in the table, the table headers will reflect the property names by default when using strings and are capitalized and separated on camelCase, underscores, and dashes. 
         </p>
@@ -99,6 +102,13 @@ export default {
                     ['options.pagingOptions', 'array[number] (default = [5, 10, 25, 50])'],
                     ['options.sortable', 'boolean (default = true)'],
                     ['options.selectable', 'boolean (default = false)']
+                ],
+                columnDataProps: [
+                    ['id', 'Any'],
+                    ['displayText', 'string | number'],
+                    ['cellRenderer', 'function'],
+                    ['cellClasses', 'array[string|number] | string'],
+                    ['headerClasses', 'array[string|number] | string'],
                 ],
                 events: [
                     ['selected-update', 'Array[rowKey]']
