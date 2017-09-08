@@ -19,7 +19,13 @@
             return {
                 props: [
                     ['value', 'String'],
-                    ['format', 'String']
+                    ['format', 'String'],
+                    ['selectMonths', 'Boolean'],
+                    ['selectYears', 'Number'],
+                    ['closeOnSelect', 'Boolean'],
+                    ['todayText', 'String'],
+                    ['clearText', 'String'],
+                    ['closeText', 'String']
                 ]
             }
         }

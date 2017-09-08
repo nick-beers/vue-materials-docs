@@ -361,6 +361,10 @@
                 text_props: [
                     ['length', 'string, number (works on input or m-text-area)'],
                     ['validate', 'boolean (works on input or m-text-area)'],
+                    ['acdata', 'Object (m-text-input)'],
+                    ['acLimit', 'Number (m-text-input)'],
+                    ['acMinLength', 'Number (m-text-input)'],
+                    ['onAutocomplete', 'Function(val) (m-text-input)']
                 ],
                 text_events: [
                     ['input', 'Value of Input'],
