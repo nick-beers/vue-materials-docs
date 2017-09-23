@@ -5,8 +5,13 @@ var webpackLinkPlugin = require('webpack-link')
 module.exports = {
   entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'build.js'
+    path: path.resolve(__dirname, ''),
+    filename: 'dev.js'
+  },
+  resolve: {
+    alias: {
+      '@src': path.resolve(__dirname, 'src')
+    }
   },
   resolveLoader: {
     modules: [__dirname, 'node_modules']
@@ -68,12 +73,16 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     noInfo: true,
-    port: 8081
+    port: 8082
   },
   devtool: 'eval-source-map'
 }
 
 if (process.env.NODE_ENV === 'production') {
+  module.exports.output = {
+    path: path.resolve(__dirname, './dist'),
+    filename: 'build.js'
+  }
   module.exports.devtool = 'source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([

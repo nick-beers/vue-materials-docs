@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import MVueComponents from '@edge_blade/vue-materials'
 import Resource from 'vue-resource'
-import Components from './components/_index'
 import App from './app.vue'
 
 Vue.use(Resource)
@@ -17,11 +16,17 @@ import 'materialize-css/dist/fonts/roboto/Roboto-Regular.woff2'
 import 'materialize-css/dist/fonts/roboto/Roboto-Medium.woff2'
 import 'materialize-css/dist/fonts/roboto/Roboto-Light.woff2'
 
-for (let key in Components) {
-    Vue.component(key, Components[key])
-}
+import router from './router'
+
+// globals
+import markup from '@src/components/markup.vue'
+import props from '@src/components/props.vue'
+
+Vue.component('markup', markup)
+Vue.component('props', props)
 
 new Vue({
   el: '#app',
+  router,
   render: h => h(App)
 })

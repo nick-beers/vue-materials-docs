@@ -1,15 +1,13 @@
 <template>
     <div id="app">
         <header>
-            <main-nav :title="selected"
-                      @select="select"
-            ></main-nav>
+            <main-nav></main-nav>
         </header>
 
         <main>
             <m-container>
                 <m-row>
-                    <component :is="component" :show="show"></component>
+                    <router-view></router-view>
                 </m-row>
             </m-container>
         </main>
@@ -19,31 +17,16 @@
 </template>
 
 <script>
+    import MainNav from '@src/components/main-nav.vue'
+    import MainFooter from '@src/components/main-footer.vue'
+    
+
     export default {
         name: 'App',
-
-        data () {
-            return {
-                selected: 'Install'
-            }
+        components: {
+            MainNav,
+            MainFooter
         },
-
-        computed: {
-            component () {
-                return `${this.selected.toLowerCase()}-doc`
-            },
-
-            show () {
-                return this.selected.toLowerCase()
-            }
-        },
-
-        methods: {
-            select (component) {
-                this.selected = component
-                window.scrollTo(0, 0)
-            }
-        }
     }
 </script>
 

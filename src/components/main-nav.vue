@@ -2,7 +2,7 @@
 <div>
     <m-nav nav-class="top-nav bladeblue">
         <div class="container">
-            <a class="page-title">{{ title }}</a>
+            <a class="page-title">{{ currentRouteName | capitalize }}</a>
         </div>
     </m-nav>
     <div class="container">
@@ -10,36 +10,27 @@
             <m-icon>menu</m-icon>
         </a>
     </div>
-    <m-side-nav slot="side-nav"
-                id="side-nav"
-                fixed
-    >
-        <template v-for="(value, key) in items">
-            <li v-if="typeof value === 'string'"
-                :class="{ 'active': value === title }"
-            >
-                <a :href="value" 
-                   v-text="value"
-                   @click.prevent="select(value)"
-                ></a>
+    <m-side-nav slot="side-nav" id="side-nav" fixed>
+        <template v-for="topRoute in routes">
+            <li v-if="!topRoute.children" :class="{ 'active bladeblue white-text': topRoute.name == currentRouteName }" :key="topRoute.name">
+                <router-link :to="{ path: topRoute.path }">
+                    {{ topRoute.name | capitalize }}
+                </router-link>
             </li>
-            <li class="no-padding" v-else>
-                <m-collapsible collapse >
+            <li class="no-padding" v-else :key="topRoute.name">
+                <m-collapsible collapse>
                     <li>
-                        <m-collapsible-header class="black-text waves-effect waves-teal"
-                                            ref="collapse"
-                        >
-                            {{ key }}
+                        <m-collapsible-header class="black-text waves-effect waves-teal" ref="collapse">
+                            {{ topRoute.name | capitalize }}
                         </m-collapsible-header>
                         <m-collapsible-body>
                             <ul>
-                                <li v-for="item in value"
-                                    :class="{ 'active bladeblue': title === item }"
-                                >
-                                    <a :href="item" 
-                                       @click.prevent="select(item)"
-                                    >{{ item }}</a>
-                                </li>
+                                <router-link tag="li" v-for="childRoute in topRoute.children" 
+                                    :class="{ 'active bladeblue': currentRouteName == childRoute.name }" 
+                                    :key="childRoute.name" 
+                                    :to="childRoute.path">
+                                        <a>{{ childRoute.name | capitalize }}</a>
+                                </router-link>
                             </ul>
                         </m-collapsible-body>
                     </li>
@@ -52,35 +43,26 @@
 
 <script>
     export default {
-        data () {
-            return {
-                items: {
-                    install: 'Install',
-                    directives: 'Directives',
-                    functional: 'Functional',
-                    dialog: 'Dialog',
-                    Components: ['Badge', 'Breadcrumbs', 'Button', 'Card', 'Carousel', 'Chip', 'Collapsible', 'Collection', 'Dropdown', 'Footer', 'Forms', 'Date-Input', 'Time-Input', 'Icon', 'Material-Box', 'Modal', 'Nav', 'Pagination', 'Parallax', 'Progress-Circular', 'Progress-Linear', 'Range', 'Side-Nav', 'Slider', 'Tabs', 'Table' , 'Scrollspy', 'Feature-Discovery']
-                },
-                icon: 'keyboard_arrow_down',
-                nav: {
-                    closeOnClick: false
-                }
+        props: [ 'pageTitle' ],
+        computed: {
+            currentRoute(){
+                return this.$route.name
+            },
+            routes(){
+                return this.$router.options.routes.slice(0, this.$router.options.routes.length-1)
+            },
+            currentRouteName() {
+                return this.$route.name
             }
         },
-
-        props: ['title'],
-
-        mounted () {
-            this.nav_close()
-        },
-
         methods: {
-            select (item) {
-                this.$emit('select', item)
-            },
-
-            nav_close () {
-                this.nav.closeOnClick = window.innerWidth < 993
+            capitalizeFirst(word){
+                return this.$options.filters.capitalize(word);
+            }
+        },
+        filters: {
+            capitalize(str){
+                return str.charAt(0).toUpperCase() + str.slice(1);
             }
         }
     }
@@ -96,6 +78,9 @@
         box-shadow: none;
     }
 
+    .side-nav li.active > a {
+        color: inherit
+    }
 
     @media only screen and (max-width: 992px){
         nav .nav-wrapper {
@@ -105,7 +90,8 @@
             font-size: 36px;
         }
     }
-
+   
+    
     a.button-collapse.top-nav {
         position: absolute;
         text-align: center;
