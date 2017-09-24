@@ -16,7 +16,6 @@ import Carousel from '@src/components/component-views/carousel-doc.vue'
 import Chip from '@src/components/component-views/chip-doc.vue'
 import Collapsible from '@src/components/component-views/collapsible-doc.vue'
 import Collection from '@src/components/component-views/collection-doc.vue'
-
 import Dropdown from '@src/components/component-views/dropdown-doc.vue'
 import Footer from '@src/components/component-views/footer-doc.vue'
 import Forms from '@src/components/component-views/forms-doc.vue'
@@ -53,6 +52,7 @@ const routes = [
             { path: '/components/collapsible', name: 'collapsible', component: Collapsible },
             { path: '/components/collection', name: 'collection', component: Collection },
             { path: '/components/dropdown', name: 'dropdown', component: Dropdown },
+            { path: '/components/feature-discovery', name: 'feature-discovery', component: FeatureDiscovery },
             { path: '/components/footer', name: 'footer', component: Footer },
             { path: '/components/forms', name: 'forms', component: Forms },
             { path: '/components/date-input', name: 'date-input', component: DateInput },
@@ -66,12 +66,11 @@ const routes = [
             { path: '/components/progress-circular', name: 'progress-circular', component: ProgressCircular },
             { path: '/components/progress-linear', name: 'progress-linear', component: ProgressLinear },
             { path: '/components/range', name: 'range', component: Range },
+            { path: '/components/scrollspy', name: 'scrollspy', component: Scrollspy },
             { path: '/components/side-nav', name: 'side-nav', component: SideNav },
             { path: '/components/slider', name: 'slider', component: Slider },
-            { path: '/components/tabs', name: 'tabs', component: Tabs },
             { path: '/components/table', name: 'table', component: Table },
-            { path: '/components/scrollspy', name: 'scrollspy', component: Scrollspy },
-            { path: '/components/feature-discovery', name: 'feature-discovery', component: FeatureDiscovery },
+            { path: '/components/tabs', name: 'tabs', component: Tabs },
         ] 
     },
     { path: '*', redirect: '/install' }

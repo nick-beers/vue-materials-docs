@@ -18,6 +18,10 @@ import 'materialize-css/dist/fonts/roboto/Roboto-Light.woff2'
 
 import router from './router'
 
+router.afterEach((to, from) => {
+  window.scrollTo(0,0)
+})
+
 // globals
 import markup from '@src/components/markup.vue'
 import props from '@src/components/props.vue'
