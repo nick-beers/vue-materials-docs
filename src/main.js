@@ -21,9 +21,11 @@ import router from './router'
 // globals
 import markup from '@src/components/markup.vue'
 import props from '@src/components/props.vue'
+import waves from '@src/components/waves.vue'
 
 Vue.component('markup', markup)
 Vue.component('props', props)
+Vue.component('waves', waves)
 
 new Vue({
   el: '#app',
