@@ -26,7 +26,7 @@
         components: {
             MainNav,
             MainFooter
-        },
+        }
     }
 </script>
 

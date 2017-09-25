@@ -5,7 +5,7 @@
             <m-side-nav id="demo">
                 <ul>
                     <li v-for="n in 5">
-                        <a href="#!">Link</a>
+                        <a :href="$root.currUrl($route.path)">Link</a>
                     </li>
                 </ul>
             </m-side-nav>

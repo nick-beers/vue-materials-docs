@@ -58,15 +58,15 @@
                 items: [
                     {
                         text: 'First',
-                        href: '#!'
+                        href: this.$root.currUrl(this.$route.path)
                     },
                     {
                         text: 'Second',
-                        href: '#!'
+                        href: this.$root.currUrl(this.$route.path)
                     },
                     {
                         text: 'Third',
-                        href: '#!'
+                        href: this.$root.currUrl(this.$route.path)
                     }
                 ]
             }

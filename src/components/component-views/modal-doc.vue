@@ -8,8 +8,8 @@
                 <p>A bunch of text</p>
             </div>
             <div slot="footer">
-                <m-btn-link class="pull-right" waves-light modal flat>Disagree</m-btn-link>
-                <m-btn-link class="pull-right" waves-light modal flat>Agree</m-btn-link>
+                <m-btn-link class="pull-right" :href="$root.currUrl($route.path)" waves-light modal flat>Disagree</m-btn-link>
+                <m-btn-link class="pull-right" :href="$root.currUrl($route.path)" waves-light modal flat>Agree</m-btn-link>
             </div>
         </m-modal>
         <markup html='
@@ -32,8 +32,8 @@
                 <p>A bunch of text</p>
             </div>
             <div slot="footer">
-                <m-btn-link class="pull-right" waves-light modal flat>Disagree</m-btn-link>
-                <m-btn-link class="pull-right" waves-light modal flat>Agree</m-btn-link>
+                <m-btn-link class="pull-right" :href="$root.currUrl($route.path)" waves-light modal flat>Disagree</m-btn-link>
+                <m-btn-link class="pull-right" :href="$root.currUrl($route.path)" waves-light modal flat>Agree</m-btn-link>
             </div>
         </m-modal>
         <markup html='
@@ -56,8 +56,8 @@
                 <p>A bunch of text</p>
             </div>
             <div slot="footer">
-                <m-btn-link class="pull-right" waves-light modal flat>Disagree</m-btn-link>
-                <m-btn-link class="pull-right" waves-light modal flat>Agree</m-btn-link>
+                <m-btn-link class="pull-right" :href="$root.currUrl($route.path)" waves-light modal flat>Disagree</m-btn-link>
+                <m-btn-link class="pull-right" :href="$root.currUrl($route.path)" waves-light modal flat>Agree</m-btn-link>
             </div>
         </m-modal>
         <markup html='
@@ -80,8 +80,8 @@
                 <p>A bunch of text</p>
             </div>
             <div slot="footer">
-                <m-btn-link class="pull-right" waves-light modal flat>Disagree</m-btn-link>
-                <m-btn-link class="pull-right" waves-light modal flat>Agree</m-btn-link>
+                <m-btn-link class="pull-right" :href="$root.currUrl($route.path)" waves-light modal flat>Disagree</m-btn-link>
+                <m-btn-link class="pull-right" :href="$root.currUrl($route.path)" waves-light modal flat>Agree</m-btn-link>
             </div>
         </m-modal>
         <markup html='

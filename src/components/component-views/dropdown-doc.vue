@@ -4,13 +4,13 @@
         <m-btn v-m-dropdown:dropdown>dropdown</m-btn>
         <m-dropdown id="dropdown">
             <li>
-                <a href="#!">Click me!</a>
+                <a :href="$root.currUrl($route.path)">Click me!</a>
             </li>
             <li>
-                <a href="#!">Click me!</a>
+                <a :href="$root.currUrl($route.path)">Click me!</a>
             </li>
             <li>
-                <a href="#!">Click me!</a>
+                <a :href="$root.currUrl($route.path)">Click me!</a>
             </li>
         </m-dropdown>
         <markup html='
@@ -31,13 +31,13 @@
         <m-btn v-m-dropdown:dropdown2 class="red" hover>dropdown</m-btn>
         <m-dropdown id="dropdown2">
             <li>
-                <a href="#!">Click me!</a>
+                <a :href="$root.currUrl($route.path)">Click me!</a>
             </li>
             <li>
-                <a href="#!">Click me!</a>
+                <a :href="$root.currUrl($route.path)">Click me!</a>
             </li>
             <li>
-                <a href="#!">Click me!</a>
+                <a :href="$root.currUrl($route.path)">Click me!</a>
             </li>
         </m-dropdown>
         <markup html='

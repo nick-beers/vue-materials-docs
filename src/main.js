@@ -34,5 +34,10 @@ Vue.component('waves', waves)
 new Vue({
   el: '#app',
   router,
+  methods: {
+    currUrl(urlPart){
+      return `${window.location.origin}/#${urlPart}`;
+    }
+  },
   render: h => h(App)
 })

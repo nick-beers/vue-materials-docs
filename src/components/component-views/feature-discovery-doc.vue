@@ -3,7 +3,7 @@
         <m-grid s12>
             <h4>Examples</h4>
 
-            <m-btn-link id="featureDiscoveryTarget" type="button" floating wavesLight>B</m-btn-link>
+            <m-btn-link id="featureDiscoveryTarget" type="button" floating wavesLight :href="$root.currUrl($route.path)">B</m-btn-link>
             <m-btn type="button" wavesLight v-m-tap-target:tapTargetDiv>Open Feature Discovery</m-btn>
             <m-tap-target id="tapTargetDiv" dataActivates="featureDiscoveryTarget">
               <h2>FD Title</h2>

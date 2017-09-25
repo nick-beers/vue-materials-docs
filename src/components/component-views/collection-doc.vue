@@ -16,10 +16,10 @@
         </m-collection>'
         ></markup>
         <m-collection>
-            <m-collection-link>Alvin</m-collection-link>
-            <m-collection-link active>Alvin</m-collection-link>
-            <m-collection-link>Alvin</m-collection-link>
-            <m-collection-link>Alvin</m-collection-link>
+            <m-collection-link :href="$root.currUrl($route.path)">Alvin</m-collection-link>
+            <m-collection-link :href="$root.currUrl($route.path)" active>Alvin</m-collection-link>
+            <m-collection-link :href="$root.currUrl($route.path)">Alvin</m-collection-link>
+            <m-collection-link :href="$root.currUrl($route.path)">Alvin</m-collection-link>
         </m-collection>
         <markup html='
         <m-collection>

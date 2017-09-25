@@ -26,7 +26,7 @@
                 <p>I am a very simple m-card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
             </div>
             <div class="card-action">
-                <a href="#">This is a link</a>
+                <a :href="$root.currUrl($route.path)">This is a link</a>
             </div>
         </m-card>
         <markup html='
@@ -51,8 +51,8 @@
                 </p>
             </div>
             <div class="card-action">
-                <a href="#">This is a link</a>
-                <a href="#">This is a link</a>
+                <a :href="$root.currUrl($route.path)">This is a link</a>
+                <a :href="$root.currUrl($route.path)">This is a link</a>
             </div>
         </m-card>
         <markup html='
@@ -75,7 +75,7 @@
             </div>
             <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">m-card Title<i class="material-icons right">more_vert</i></span>
-                <p><a href="#">This is a link</a></p>
+                <p><a :href="$root.currUrl($route.path)">This is a link</a></p>
             </div>
             <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">m-card Title<i class="material-icons right">close</i></span>

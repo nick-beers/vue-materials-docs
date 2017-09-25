@@ -29,13 +29,13 @@
         <m-btn v-m-dropdown:dropdown>Dropdown</m-btn>
         <m-dropdown id="dropdown">
             <li>
-                <a href="#">Click me <m-badge new></m-badge></a>
+                <a :href="$root.currUrl($route.path)">Click me <m-badge new></m-badge></a>
             </li>
             <li>
-                <a href="#">Click me</a>
+                <a :href="$root.currUrl($route.path)">Click me</a>
             </li>
             <li>
-                <a href="#">Click me</a>
+                <a :href="$root.currUrl($route.path)">Click me</a>
             </li>
         </m-dropdown>
         <markup html='
@@ -54,16 +54,16 @@
         ></markup>
         <h4>In Navbars</h4>
         <m-nav>
-            <a href="#!" slot="logo" class="brand-logo hide-on-med-and-down">Logo</a>
+            <a :href="$root.currUrl($route.path)" slot="logo" class="brand-logo hide-on-med-and-down">Logo</a>
             <ul class="right">
                 <li>
-                    <a href="#!">sass <m-badge new></m-badge></a>
+                    <a :href="$root.currUrl($route.path)">sass <m-badge new></m-badge></a>
                 </li>
                 <li>
-                    <a href="#!">sass</a>
+                    <a :href="$root.currUrl($route.path)">sass</a>
                 </li>
                 <li>
-                    <a href="#!">sass</a>
+                    <a :href="$root.currUrl($route.path)">sass</a>
                 </li>
             </ul>
         </m-nav>
